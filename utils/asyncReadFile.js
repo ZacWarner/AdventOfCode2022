@@ -15,4 +15,4 @@ async function asyncReadFile(filename) {
     }
 }
 
-export default asyncReadFile(filename);
+module.exports = asyncReadFile;
