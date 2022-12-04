@@ -7,7 +7,6 @@ async function asyncReadFile(filename) {
 
         const arr = contents.split(/\r?\n/);
 
-        console.log(arr); // 👉️ ['One', 'Two', 'Three', 'Four']
 
         return arr;
     } catch (err) {
