@@ -1,4 +1,4 @@
-const { readFileSync, promises: fsPromises } = require('fs');
+const { promises: fsPromises } = require('fs');
 
 // ✅ read file ASYNCHRONOUSLY
 async function asyncReadFile(filename) {
@@ -6,8 +6,6 @@ async function asyncReadFile(filename) {
         const contents = await fsPromises.readFile(filename, 'utf-8');
 
         const arr = contents.split(/\r?\n/);
-
-        console.log(arr); // 👉️ ['One', 'Two', 'Three', 'Four']
 
         return arr;
     } catch (err) {
@@ -19,11 +17,11 @@ async function asyncReadFile(filename) {
 
 async function part1() {
     const calList = await asyncReadFile('./input.txt');
-
     const elfList = [];
 
     let elf = 0;
 
+    //go through list, add the calories to elf, if line is empty save current elf and start another
     calList.forEach((snack) => {
         if (snack !== '') {
             elf += parseInt(snack);
@@ -39,15 +37,10 @@ async function part1() {
 
 async function part2() {
     const calList = await asyncReadFile('./input.txt');
-
     const elfList = [];
-
     let elf = 0;
-
     let firstElf = 0;
-
     let secondElf = 0;
-
     let thirdElf = 0;
 
     calList.forEach((snack) => {
