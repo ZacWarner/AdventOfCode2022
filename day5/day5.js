@@ -30,7 +30,6 @@ async function part1() {
                     stackArr[itemPos] = [item];
                     itemPos++
                 }
-
             } else {
                 if (spaceCount < 3) {
                     spaceCount++
