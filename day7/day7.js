@@ -1,7 +1,7 @@
 const asyncReadFile = require("../utils/asyncReadFile");
 
 async function part1() {
-    const data = await asyncReadFile('./test.txt');
+    const data = await asyncReadFile('./input.txt');
     let directories = [];
     let directory = {
         name: '',
@@ -101,4 +101,6 @@ async function part1() {
     console.log(total);
 }
 
+
+//https://github.com/Unknown-Universe/AOC-2022/blob/main/Day%207/src/index.ts
 part1();
